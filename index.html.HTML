@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>محمد أحمد مثنى العبد | أبو أحمد</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@500;600;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Noto Naskh Arabic", "Tahoma", "Arial", sans-serif;
+    }
+
+    :root {
+      --deep-water: #063b46;
+      --water-blue: #0e7490;
+      --soft-water: #e7f8fb;
+      --life-green: #2f9e73;
+      --mint: #eaf8f0;
+      --text-dark: #12343b;
+      --text-gray: #52676d;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at top right, rgba(47, 158, 115, 0.16), transparent 35%),
+        radial-gradient(circle at bottom left, rgba(14, 116, 144, 0.18), transparent 35%),
+        linear-gradient(135deg, #f4fcff, #eefaf2, #fffaf0);
+      color: var(--text-dark);
+      line-height: 2.05;
+      font-weight: 700;
+      overflow-x: hidden;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      color: white;
+      overflow: hidden;
+      border-bottom-left-radius: 70px;
+      border-bottom-right-radius: 70px;
+      box-shadow: 0 25px 60px rgba(6, 59, 70, 0.28);
+      background: #063b46;
+    }
+
+    .hero-slider {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .hero-slider span {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0;
+      transform: scale(1.08);
+      animation: sliderShow 72s infinite;
+    }
+
+    /* صور حفارات المياه مع خروج المياه */
+    .hero-slider span:nth-child(1) {
+      background-image: url("water-drilling-1.jpg");
+      animation-delay: 0s;
+    }
+
+    .hero-slider span:nth-child(2) {
+      background-image: url("water-drilling-2.jpg");
+      animation-delay: 6s;
+    }
+
+    .hero-slider span:nth-child(3) {
+      background-image: url("water-drilling-3.jpg");
+      animation-delay: 12s;
+    }
+
+    /* خلفيات إضافية عن الماء والطبيعة والوديان */
+    .hero-slider span:nth-child(4) {
+      background-image: url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=2000&q=100");
+      animation-delay: 18s;
+    }
+
+    .hero-slider span:nth-child(5) {
+      background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=100");
+      animation-delay: 24s;
+    }
+
+    .hero-slider span:nth-child(6) {
+      background-image: url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=2000&q=100");
+      animation-delay: 30s;
+    }
+
+    .hero-slider span:nth-child(7) {
+      background-image: url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2000&q=100");
+      animation-delay: 36s;
+    }
+
+    .hero-slider span:nth-child(8) {
+      background-image: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=2000&q=100");
+      animation-delay: 42s;
+    }
+
+    .hero-slider span:nth-child(9) {
+      background-image: url("https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=2000&q=100");
+      animation-delay: 48s;
+    }
+
+    .hero-slider span:nth-child(10) {
+      background-image: url("https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=2000&q=100");
+      animation-delay: 54s;
+    }
+
+    .hero-slider span:nth-child(11) {
+      background-image: url("https://images.unsplash.com/photo-1470770903676-69b98201ea1c?auto=format&fit=crop&w=2000&q=100");
+      animation-delay: 60s;
+    }
+
+    .hero-slider span:nth-child(12) {
+      background-image: url("https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=2000&q=100");
+      animation-delay: 66s;
+    }
+
+    @keyframes sliderShow {
+      0% {
+        opacity: 0;
+        transform: scale(1.08);
+      }
+
+      3% {
+        opacity: 1;
+      }
+
+      8% {
+        opacity: 1;
+        transform: scale(1.02);
+      }
+
+      11% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 0;
+        transform: scale(1.08);
+      }
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          to left,
+          rgba(6, 59, 70, 0.64),
+          rgba(6, 59, 70, 0.26),
+          rgba(47, 158, 115, 0.10)
+        );
+      z-index: 1;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      width: 700px;
+      height: 700px;
+      left: -240px;
+      bottom: -280px;
+      background: radial-gradient(circle, rgba(139, 195, 74, 0.24), transparent 65%);
+      z-index: 1;
+    }
+
+    .hero-layout {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 50px;
+      align-items: center;
+      padding: 90px 0;
+    }
+
+    .profile-box {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.10);
+      border: 2px solid rgba(255, 255, 255, 0.42);
+      border-radius: 42px;
+      padding: 38px 30px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.30);
+    }
+
+    .profile-box img {
+      width: 330px;
+      height: 330px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 8px solid rgba(255, 255, 255, 0.95);
+      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.38);
+      margin-bottom: 25px;
+      background: #ffffff;
+    }
+
+    .profile-box h1 {
+      font-size: 45px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.45;
+      margin-bottom: 12px;
+      text-shadow: 0 5px 18px rgba(0, 0, 0, 0.55);
+    }
+
+    .profile-name {
+      display: inline-block;
+      font-size: 36px;
+      font-weight: 700;
+      color: #f3fff9;
+      background: linear-gradient(135deg, rgba(47, 158, 115, 0.58), rgba(14, 116, 144, 0.36));
+      border: 2px solid rgba(236, 255, 246, 0.50);
+      padding: 8px 34px;
+      border-radius: 45px;
+      text-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.20);
+      margin-bottom: 18px;
+    }
+
+    .address-box {
+      margin: 8px auto 0;
+      padding: 12px 22px;
+      border-radius: 26px;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.38);
+      color: #ffffff;
+      max-width: 380px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.20);
+      backdrop-filter: blur(5px);
+    }
+
+    .address-box span {
+      display: block;
+      font-size: 24px;
+      font-weight: 700;
+      color: #eafff4;
+      margin-bottom: 5px;
+    }
+
+    .address-box p {
+      font-size: 25px;
+      font-weight: 700;
+      line-height: 1.6;
+      color: #ffffff;
+      text-shadow: 0 3px 10px rgba(0, 0, 0, 0.45);
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.18);
+      border: 2px solid rgba(255, 255, 255, 0.55);
+      color: #ecfff6;
+      padding: 12px 34px;
+      border-radius: 50px;
+      margin-bottom: 30px;
+      font-size: 28px;
+      font-weight: 700;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.24);
+    }
+
+    header h2 {
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 1.75;
+      color: #ffffff;
+      margin-bottom: 38px;
+      text-shadow: 0 5px 18px rgba(0, 0, 0, 0.60);
+    }
+
+    .buttons {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 20px 52px;
+      border-radius: 60px;
+      text-decoration: none;
+      font-size: 29px;
+      font-weight: 700;
+      transition: 0.3s ease;
+      box-shadow: 0 16px 35px rgba(0, 0, 0, 0.28);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--life-green), #1f8f68);
+      color: white;
+      border: 2px solid rgba(255, 255, 255, 0.28);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.96);
+      color: var(--deep-water);
+      border: 2px solid rgba(255, 255, 255, 0.96);
+    }
+
+    .btn:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 20px 42px rgba(0, 0, 0, 0.34);
+    }
+
+    section {
+      margin-top: 100px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 58px;
+    }
+
+    .section-title h2 {
+      font-size: 58px;
+      font-weight: 700;
+      color: var(--deep-water);
+      display: inline-block;
+      position: relative;
+      margin-bottom: 16px;
+    }
+
+    .section-title h2::after {
+      content: "";
+      position: absolute;
+      width: 75%;
+      height: 7px;
+      right: 12.5%;
+      bottom: -12px;
+      border-radius: 30px;
+      background: linear-gradient(90deg, var(--life-green), var(--water-blue));
+    }
+
+    .section-title p {
+      font-size: 30px;
+      font-weight: 700;
+      color: var(--text-gray);
+      margin-top: 28px;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.92);
+      padding: 56px;
+      border-radius: 40px;
+      box-shadow: 0 18px 50px rgba(6, 59, 70, 0.13);
+      border: 1px solid rgba(14, 116, 144, 0.12);
+      border-top: 10px solid var(--life-green);
+      backdrop-filter: blur(6px);
+    }
+
+    .card h3 {
+      color: var(--water-blue);
+      font-size: 50px;
+      font-weight: 700;
+      margin-bottom: 26px;
+    }
+
+    .card p {
+      font-size: 31px;
+      font-weight: 700;
+      color: var(--text-dark);
+      line-height: 2;
+      margin-bottom: 22px;
+    }
+
+    .image-card {
+      min-height: 500px;
+      border-radius: 40px;
+      background:
+        linear-gradient(rgba(6, 59, 70, 0.22), rgba(47, 158, 115, 0.26)),
+        url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=90");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 50px;
+      box-shadow: 0 18px 50px rgba(6, 59, 70, 0.18);
+      overflow: hidden;
+    }
+
+    .image-card-content {
+      background: rgba(6, 59, 70, 0.66);
+      border: 1px solid rgba(255,255,255,0.30);
+      padding: 45px;
+      border-radius: 34px;
+      backdrop-filter: blur(8px);
+    }
+
+    .image-card .icon {
+      font-size: 130px;
+      margin-bottom: 20px;
+    }
+
+    .image-card h3 {
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 1.75;
+      text-shadow: 0 5px 15px rgba(0,0,0,0.35);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .service {
+      position: relative;
+      background: rgba(255, 255, 255, 0.94);
+      padding: 52px 32px;
+      border-radius: 38px;
+      text-align: center;
+      box-shadow: 0 16px 42px rgba(6, 59, 70, 0.11);
+      transition: 0.3s ease;
+      border: 1px solid rgba(14, 116, 144, 0.12);
+      overflow: hidden;
+    }
+
+    .service::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 9px;
+      background: linear-gradient(90deg, var(--life-green), var(--water-blue));
+    }
+
+    .service:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 22px 55px rgba(6, 59, 70, 0.18);
+    }
+
+    .service span {
+      font-size: 76px;
+      display: block;
+      margin-bottom: 24px;
+    }
+
+    .service h3 {
+      color: var(--deep-water);
+      font-size: 39px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .service p {
+      color: var(--text-gray);
+      font-size: 27px;
+      font-weight: 700;
+      line-height: 1.9;
+    }
+
+    .features {
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.96), rgba(234,248,240,0.92));
+      padding: 66px;
+      border-radius: 42px;
+      box-shadow: 0 18px 50px rgba(6, 59, 70, 0.13);
+      border: 1px solid rgba(47, 158, 115, 0.14);
+      border-right: 12px solid var(--life-green);
+    }
+
+    .features ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .features li {
+      background:
+        linear-gradient(135deg, var(--soft-water), var(--mint));
+      padding: 30px;
+      border-radius: 26px;
+      font-size: 30px;
+      font-weight: 700;
+      color: var(--text-dark);
+      border: 1px solid rgba(14, 116, 144, 0.10);
+      box-shadow: 0 9px 22px rgba(6, 59, 70, 0.07);
+      line-height: 1.7;
+    }
+
+    .features li::before {
+      content: "✓ ";
+      color: var(--life-green);
+      font-size: 35px;
+      font-weight: 700;
+    }
+
+    .contact {
+      position: relative;
+      color: white;
+      padding: 80px 45px;
+      border-radius: 46px;
+      text-align: center;
+      margin-bottom: 75px;
+      overflow: hidden;
+      background:
+        linear-gradient(rgba(6, 59, 70, 0.82), rgba(47, 158, 115, 0.72)),
+        url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=90");
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 24px 58px rgba(6, 59, 70, 0.30);
+    }
+
+    .contact h2 {
+      font-size: 58px;
+      font-weight: 700;
+      margin-bottom: 24px;
+      text-shadow: 0 6px 18px rgba(0,0,0,0.42);
+    }
+
+    .contact p {
+      font-size: 32px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.9;
+      margin-bottom: 40px;
+      text-shadow: 0 4px 14px rgba(0,0,0,0.34);
+    }
+
+    footer {
+      text-align: center;
+      padding: 38px 20px;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--text-gray);
+    }
+
+    @media (max-width: 900px) {
+      header {
+        min-height: auto;
+        padding: 70px 0;
+        border-bottom-left-radius: 38px;
+        border-bottom-right-radius: 38px;
+      }
+
+      .hero-layout {
+        grid-template-columns: 1fr;
+        gap: 38px;
+        padding: 35px 0;
+      }
+
+      .profile-box {
+        order: 1;
+      }
+
+      .hero-content {
+        order: 2;
+      }
+
+      .profile-box img {
+        width: 235px;
+        height: 235px;
+      }
+
+      .profile-box h1 {
+        font-size: 35px;
+      }
+
+      .profile-name {
+        font-size: 28px;
+      }
+
+      .address-box span {
+        font-size: 20px;
+      }
+
+      .address-box p {
+        font-size: 21px;
+      }
+
+      .badge {
+        font-size: 21px;
+      }
+
+      header h2 {
+        font-size: 30px;
+        line-height: 1.8;
+      }
+
+      .about,
+      .services-grid,
+      .features ul {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title h2 {
+        font-size: 42px;
+      }
+
+      .section-title p {
+        font-size: 24px;
+      }
+
+      .card,
+      .features {
+        padding: 35px 26px;
+      }
+
+      .card h3 {
+        font-size: 38px;
+      }
+
+      .card p {
+        font-size: 25px;
+      }
+
+      .image-card {
+        min-height: 400px;
+      }
+
+      .image-card h3 {
+        font-size: 32px;
+      }
+
+      .service h3 {
+        font-size: 34px;
+      }
+
+      .service p,
+      .features li {
+        font-size: 24px;
+      }
+
+      .contact h2 {
+        font-size: 40px;
+      }
+
+      .contact p {
+        font-size: 25px;
+      }
+
+      .btn {
+        font-size: 23px;
+        padding: 16px 36px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+
+    <div class="hero-slider">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="container">
+
+      <div class="hero-layout">
+
+        <div class="profile-box">
+          <img src="abu-ahmad.jpg.png" alt="صورة أبو أحمد">
+
+          <h1>محمد أحمد مثنى العبد</h1>
+
+          <div class="profile-name">{ أبو أحمد }</div>
+
+          <div class="address-box">
+            <span>📍 العنوان</span>
+            <p>الضالع - مريس - الشارع العام</p>
+            <p>قرية الساكن</p>
+          </div>
+        </div>
+
+        <div class="hero-content">
+
+          <span class="badge">استكشاف المياه الجوفية</span>
+
+          <h2>
+            استكشاف مواقع المياه الجوفية وتحديد الأماكن المناسبة للحفر، مع خبرة
+            ومهارة في معاينة الأراضي ودراسة طبيعتها، وتحديد المواقع الأكثر
+            احتمالًا لوجود المياه الجوفية تحت سطح الأرض بإذن الله
+          </h2>
+
+          <div class="buttons">
+            <a href="tel:781218541" class="btn btn-primary">اتصل الآن</a>
+            <a href="https://wa.me/+967781218541" class="btn btn-secondary">تواصل واتساب</a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="about">
+      <div class="card">
+        <h3>نبذة عن العمل</h3>
+
+        <p>
+          يقدم محمد أحمد مثنى العبد، المعروف باسم أبو أحمد، خدمة استكشاف مواقع
+          المياه الجوفية من خلال معاينة الأرض ودراسة طبيعتها والعلامات والمؤشرات
+          التي تساعد في تحديد الأماكن المناسبة للحفر بإذن الله.
+        </p>
+
+        <p>
+          يتم العمل بخبرة عملية وملاحظة دقيقة لطبيعة الأرض، مع الحرص على اختيار
+          الموقع الأقرب لاحتمالية وجود المياه، والنتيجة بيد الله سبحانه وتعالى.
+        </p>
+      </div>
+
+      <div class="image-card">
+        <div class="image-card-content">
+          <div class="icon">💧</div>
+          <h3>تحديد أفضل موقع للحفر بإذن الله</h3>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <h2>خدماتنا</h2>
+        <p>خدمات عملية تساعدك في اختيار الموقع المناسب للبحث عن المياه الجوفية</p>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service">
+          <span>🌿</span>
+          <h3>معاينة الأرض</h3>
+          <p>
+            فحص الموقع ودراسة طبيعة الأرض والتضاريس قبل تحديد النقطة المناسبة.
+          </p>
+        </div>
+
+        <div class="service">
+          <span>💧</span>
+          <h3>استكشاف المياه</h3>
+          <p>
+            تحديد الأماكن الأقرب لاحتمالية وجود المياه الجوفية تحت سطح الأرض.
+          </p>
+        </div>
+
+        <div class="service">
+          <span>📍</span>
+          <h3>تحديد نقطة الحفر</h3>
+          <p>
+            اختيار النقطة الأنسب للحفر بناءً على الخبرة والمعاينة الميدانية.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="section-title">
+        <h2>لماذا تختار أبو أحمد؟</h2>
+        <p>نعتمد على الخبرة، الدقة، والمعاينة المباشرة للموقع</p>
+      </div>
+
+      <ul>
+        <li>خبرة عملية في قراءة طبيعة الأرض</li>
+        <li>معاينة دقيقة للموقع قبل تحديد النقطة</li>
+        <li>اختيار الأماكن الأقرب لاحتمالية وجود المياه</li>
+        <li>خدمة واضحة ومباشرة للعميل</li>
+        <li>الحرص على تقديم أفضل نتيجة ممكنة بإذن الله</li>
+        <li>التعامل بمصداقية واهتمام</li>
+      </ul>
+    </section>
+
+    <section class="contact">
+      <h2>للتواصل والاستفسار</h2>
+
+      <p>
+        يمكنكم التواصل مع أبو أحمد لحجز معاينة أو الاستفسار عن خدمة استكشاف مواقع المياه الجوفية.
+      </p>
+
+      <a href="tel:+967781218541" class="btn btn-secondary">اتصل الآن</a>
+    </section>
+
+  </main>
+
+  <footer>
+    جميع الحقوق محفوظة © محمد أحمد مثنى العبد - أبو أحمد
+  </footer>
+
+</body>
+</html>
